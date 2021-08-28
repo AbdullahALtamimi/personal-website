@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap');
+* {
+    box-sizing: border-box;
+    padding:0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: #22313f;
+    height: 200vh;
+    
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    background-color: #00b5cc;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #2574a9;
+}
+.head{
+    height:80px;
+    width: 100%;
+    background-color:#24252a;
+}
+.head .heading ul li {
+  float: right;
+  
+  position: relative;
+  top: 29px;
+  
+}
+ a{
+ color: white;
+ font-size: 17px;
+  padding: 9px 15px;
+  transition: all 0.4s;
+  text-transform:uppercase;
+}
+.logo h2{
+    position:absolute;
+    left: 30px;
+    top: 12px;
+    font-weight:bold;
+    font-size: 40px;
+    color: white;
+}
+.head a:hover{
+    background-color:rgb(48, 70, 131) ;
+    border-radius: 20px;
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.welcome h1{
+  color:white;
+  padding-bottom: 250px;
+  position: relative;
+  animation-name:welcome;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.welcome .lorem {
+    margin: 50px 20px;
+    color: white;
+    position: relative;
+    left:-2000px;
+    animation-name:lorem;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    line-height: 25px;
+}
+.welcome a{
+    padding: 7px 20px;
+    border: 2px solid;
+    opacity: 0;
+    animation-name:btn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay:3s;
+    transition: 0.5s;
+
+}
+@keyframes welcome{
+    0%{top:0px;}
+    100%{top:250px ;}
+}
+
+@keyframes lorem{
+    0%{left:-2000px;}
+    100%{left:0px}
+}
+
+@keyframes btn{
+   0%{opacity: 0;}
+   100%{opacity: 1;}
+}
+.welcome a:hover{
+    transform: rotateY(180deg);
+}
+
+.sos {
+    display: flex;
+}
+
+.sos{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+.sos a i{
+    font-size: 30px;
+    padding: 12px;
+    border-radius: 50%;
+    transition: ease-out all 0.5s;
+}
+
+i:hover{
+    border: 3px solid;
+    size: 35px ;
+    color: cornflowerblue;
+    
+}
+.fa-facebook-square{
+   position:relative;
+   left:-1000px;
+   animation-name:face;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay:1s;
+}
+.fa-instagram{
+    position:relative;
+    right:-1000px;
+    animation-name:ig;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay:1s;
+}
+
+@keyframes face{
+    0%{left:-1000px}
+    100%{left:0px}
+}
+@keyframes ig{
+    0%{right:-1000px}
+    100%{right:0px}
+}
+.box{
+    width: 99vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.card1{
+    
+    background-color: white;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "score";
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 5px 5px 18px rgba(0,0,0,0.9);
+    transition-property: transform, box-shadow;
+    transition:0.6s;
+    margin-right: 40px;
+    cursor: pointer;
+    
+}
+.card1 .image-card{
+    grid-area:image;
+    background: url(2107890.jpg);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-size: cover;
+}
+.card1 .text{
+    grid-area: text;
+    margin-top: 30px;
+    
+}
+.card1 .end {
+    grid-area: score;
+    background-color: #2c3e50;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.card1 .end div{
+    margin-top: 30px;
+}
+.card1 .text span{
+    color: #2c3e50;
+}
+.card1:hover{
+    transform:scale(1.1);
+    box-shadow: 5px 5px 18px rgba(0,0,0,0.9);
+}
+.card2{
+    
+    background-color: white;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "score";
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 5px 5px 18px rgba(0,0,0,0.9);
+    transition-property: transform, box-shadow;
+    transition:0.6s;
+    cursor: pointer;
+    
+}
+.card2 .image-card{
+    grid-area:image;
+    background: url(2107890.jpg);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-size: cover;
+}
+.card2 .text{
+    grid-area: text;
+    margin-top: 30px;
+    
+}
+.card2 .end {
+    grid-area: score;
+    background-color: #2c3e50;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.card2 .end div{
+    margin-top: 30px;
+}
+.card2 .text span{
+    color: #2c3e50;
+}
+.card2:hover{
+    transform:scale(1.1);
+    box-shadow: 5px 5px 18px rgba(0,0,0,0.9);
+}
+.score{
+    color: white;
+}
